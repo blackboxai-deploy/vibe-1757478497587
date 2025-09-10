@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+/* Estilos personalizados súper llamativos */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #fef7ed 0%, #ffffff 50%, #f7fee7 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-keto-primary via-keto-sage to-keto-mint bg-clip-text text-transparent;
+  }
+  
+  .gradient-bg-nature {
+    background: linear-gradient(135deg, #16a34a, #84cc16);
+  }
+  
+  .gradient-bg-earth {
+    background: linear-gradient(135deg, #dc2626, #ea580c);
+  }
+  
+  .gradient-bg-organic {
+    background: linear-gradient(135deg, #16a34a, #10b981, #84cc16);
+    background-size: 300% 300%;
+    animation: gradient 25s ease infinite;
+  }
+  
+  .gradient-bg-warm {
+    background: linear-gradient(135deg, #ea580c, #fbbf24);
+  }
+  
+  .gradient-bg-forest {
+    background: linear-gradient(135deg, #166534, #16a34a);
+  }
+   .glass-effect {
+    @apply bg-white/30 backdrop-blur-lg border border-white/40;
+  }
+  
+  .professional-glow {
+    box-shadow: 0 0 15px rgba(4, 120, 87, 0.3), 0 0 25px rgba(4, 120, 87, 0.2);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 8px rgba(4, 120, 87, 0.4), 0 0 15px rgba(4, 120, 87, 0.2);
+  }
+  
+  .elegant-shadow {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .button-3d {
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+  }
+  
+  .button-3d:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Animaciones personalizadas */
+@keyframes pulse-rainbow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+  25% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.5);
+  }
+  75% {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+  }
+}
+
+.pulse-rainbow {
+  animation: pulse-rainbow 3s infinite;
+}
